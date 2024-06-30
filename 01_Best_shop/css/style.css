@@ -49,4 +49,29 @@ a {
   color: var(--color-primary);
 }
 
-.header
+.nav-bar {
+  display: flex;
+}
+
+.nav-links {
+  color: var(--color-grey);
+  letter-spacing: 3.28px;
+  text-transform: uppercase;
+  font-family: var(--font-open-sans);
+  font-weight: 700;
+  font-size: 11px;
+  padding: 25px 25px 22px;
+}
+
+.nav-links:hover {
+  color: var(--color-black);
+  border-bottom: 4px solid var(--color-primary)
+}
+
+.nav-element {
+  padding: 0 26px;
+}
+
+.nav-element:last-child {
+  padding-right: 0;
+}
