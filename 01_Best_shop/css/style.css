@@ -98,7 +98,7 @@ a {
   font-weight: bold;
   display: inline-block;
   border-radius: var(--button-radius);
- }
+}
 
 .opening-button {
   background-color: var(--color-primary);
@@ -116,10 +116,10 @@ a {
 }
 
 .statistic-title {
- text-align: center;
- font-family: var(--font-raleway);
- font-size: 2.25rem;
- margin: 90px 0;
+  text-align: center;
+  font-family: var(--font-raleway);
+  font-size: 2.25rem;
+  margin: 90px 0;
 }
 
 .statistics-container {
@@ -150,7 +150,7 @@ a {
   position: absolute;
 }
 
-.statistics:nth-child(1) .statistic-circle{
+.statistics:nth-child(1) .statistic-circle {
   background-color: var(--color-redish);
 }
 
@@ -159,7 +159,7 @@ a {
   left: 50%;
 }
 
-.statistics:nth-child(2) .statistic-circle{
+.statistics:nth-child(2) .statistic-circle {
   background-color: var(--color-primary);
 }
 
@@ -168,7 +168,7 @@ a {
   left: 37%;
 }
 
-.statistics:nth-child(3) .statistic-circle{
+.statistics:nth-child(3) .statistic-circle {
   background-color: var(--color-green);
 }
 
@@ -195,18 +195,18 @@ a {
 }
 
 .benefits-container {
-    padding: 0 100px;
-    max-width: 1500px;
+  padding: 0 100px;
   margin: 0 auto;
+  max-width: 1400px;
 }
 
 .benefits-box {
   background-color: var(--color-white);
-  border: 1px solid #E8E9ED;
+  border: 1px solid #e8e9ed;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   margin-bottom: 37px;
 }
 
@@ -225,13 +225,39 @@ a {
 }
 
 .benefits-title {
-font-family: var(--font-raleway);
-font-size: 2.25rem;
-margin-bottom: 30px;
+  font-family: var(--font-raleway);
+  font-size: 2.25rem;
+  margin-bottom: 30px;
 }
 
 .benefit-description {
-font-family: var(--font-open-sans);
-font-size: 1rem;
-line-height: 18px;
+  font-family: var(--font-open-sans);
+  font-size: 1rem;
+  line-height: 18px;
+}
+
+.benefits-img {
+  position: relative;
+  margin: 38px 71px;
+  width: 433px;
+}
+
+.benefits-macbook .benefits-img img {
+  position: relative;
+  width: 386px;
+  height: auto;
+  z-index: 100;
+}
+
+.benefits-macbook .benefits-img::before {
+  content: "";
+  display: block;
+  width: 180px;
+  height: 180px;
+  background-color: var(--color-redish);
+  border-radius: 41px;
+  position: absolute;
+  transform: rotate(45deg);
+  top: -37px;
+  right: 35px;
 }
