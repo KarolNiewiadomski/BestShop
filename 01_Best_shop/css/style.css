@@ -215,3 +215,23 @@ a {
   margin: 91px 35px;
 }
 
+.benefits-text::after {
+  display: block;
+  content: "";
+  width: 328px;
+  height: 4px;
+  background-color: var(--color-redish);
+  margin-top: 50px;
+}
+
+.benefits-title {
+font-family: var(--font-raleway);
+font-size: 2.25rem;
+margin-bottom: 30px;
+}
+
+.benefit-description {
+font-family: var(--font-open-sans);
+font-size: 1rem;
+line-height: 18px;
+}
