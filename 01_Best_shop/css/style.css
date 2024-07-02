@@ -209,3 +209,9 @@ a {
   align-items: flex-end;
   margin-bottom: 37px;
 }
+
+.benefits-text {
+  width: 415px;
+  margin: 91px 35px;
+}
+
