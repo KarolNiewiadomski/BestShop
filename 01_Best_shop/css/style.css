@@ -197,7 +197,7 @@ a {
 .benefits-container {
   padding: 0 100px;
   margin: 0 auto;
-  max-width: 1400px;
+  max-width: 1200px;
 }
 
 .benefits-box {
@@ -244,7 +244,7 @@ a {
 
 .benefits-macbook .benefits-img img {
   position: relative;
-  width: 386px;
+  width: 370px;
   height: auto;
   z-index: 100;
 }
@@ -260,4 +260,69 @@ a {
   transform: rotate(45deg);
   top: -37px;
   right: 35px;
+}
+
+.benefits-phone {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.benefits-phone .benefits-text::after {
+  display: block;
+  content: "";
+  width: 328px;
+  height: 4px;
+  background-color: var(--color-primary);
+  margin-top: 50px;
+}
+
+.benefits-phone img {
+  position: relative;
+  width: 426px;
+  height: auto;
+  z-index: 100;
+}
+
+.benefits-phone .benefits-img::before {
+  content: "";
+  display: block;
+  width: 320px;
+  height: 320px;
+  background-color: var(--color-primary);
+  position: absolute;
+  border-radius: 50%;
+  top: -20px;
+  left: -15px;
+}
+
+.benefits-double {
+  display: flex;
+}
+
+.benefits-solo {
+  width: 623px;
+  margin-right: 60px;
+  margin-bottom: 0;
+}
+
+.benefits-right {
+  width: 440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-green);
+}
+
+.benefits-double .benefits-text::after {
+  display: block;
+  content: "";
+  width: 328px;
+  height: 4px;
+  background-color: var(--color-green);
+  margin-top: 50px;
+}
+
+.benefits-right-img img {
+  width: 296px;
+  height: 208px;
 }
