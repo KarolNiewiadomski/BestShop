@@ -190,6 +190,22 @@ a {
 }
 
 .benefits {
-  height: 1395px;
+  padding: 100px 0;
   background-color: var(--color-light-grey);
+}
+
+.benefits-container {
+  width: 1124px;
+    /* padding: 0 100px; */
+  margin: 0 auto;
+}
+
+.benefits-box {
+  background-color: var(--color-white);
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 37px;
 }
