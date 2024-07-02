@@ -195,8 +195,8 @@ a {
 }
 
 .benefits-container {
-  width: 1124px;
-    /* padding: 0 100px; */
+    padding: 0 100px;
+    max-width: 1500px;
   margin: 0 auto;
 }
 
