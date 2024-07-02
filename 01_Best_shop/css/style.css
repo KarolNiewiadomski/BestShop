@@ -111,7 +111,7 @@ a {
   height: auto;
 }
 
-/* .statistics-section {
+.statistics-section {
   height: 531px;
 }
 
@@ -192,4 +192,4 @@ a {
 .benefits {
   height: 1395px;
   background-color: var(--color-light-grey);
-} */
+}
