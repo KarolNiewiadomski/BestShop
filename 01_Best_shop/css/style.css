@@ -326,3 +326,15 @@ a {
   width: 296px;
   height: 208px;
 }
+
+.pricing {
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing-boxes {
+
+}
