@@ -419,8 +419,15 @@ a {
 }
 
 .pricing-button {
+  background-color: var(--color-redish);
   position: relative;
   bottom: -25px;
   font-size: 0.8125rem;
-  background-color: var(--accent-color);
+  color: var(--color-white);
+  border-radius: 23px;
+  padding: 16px 57px;
+}
+
+.pricing-basic .pricing-price {
+  margin-bottom: 30px;
 }
