@@ -461,3 +461,13 @@ a {
  .premium-price {
   color: var(--color-green);
  }
+
+ .contact-container {
+  margin: 80px auto;
+  display: flex;
+  justify-content: center;
+ }
+
+ .contact-column {
+  width: 50%;
+ }
