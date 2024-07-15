@@ -431,3 +431,21 @@ a {
 .pricing-basic .pricing-price {
   margin-bottom: 30px;
 }
+
+.pricing-box-professional {
+  border-color: var(--color-primary);
+  box-shadow: 5px 1px 27px var(--color-primary-shadow);
+  width: 400px;
+  height: 500px;
+  margin: 0 40px;
+ }
+
+ .professional-button {
+  background-color: var(--color-primary);
+  position: relative;
+  bottom: -95px;
+ }
+
+ .professional-price {
+  color: var(--color-primary);
+ }
