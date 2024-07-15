@@ -449,3 +449,15 @@ a {
  .professional-price {
   color: var(--color-primary);
  }
+
+ .pricing-box-premium {
+  border-color: var(--color-green);
+ }
+
+ .premium-button {
+  background-color: var(--color-green);
+ }
+
+ .premium-price {
+  color: var(--color-green);
+ }
