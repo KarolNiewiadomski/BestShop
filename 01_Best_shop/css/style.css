@@ -538,3 +538,28 @@ a {
   font-size: .75rem;
   color: var(--color-grey);
 }
+
+.form-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-grey);
+  border-radius: 4px;
+}
+
+.form-checkbox input:checked ~ .checkbox {
+  background-image: url("../assets/Checkmark.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
