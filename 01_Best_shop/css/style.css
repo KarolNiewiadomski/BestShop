@@ -563,7 +563,8 @@ a {
 }
 
 .consent-text {
-
+  margin: 0 10px;
+  font-size: 0.75rem;
   color: var(--color-grey);
   line-height: 17px;
 }
