@@ -535,8 +535,6 @@ a {
   position: relative;
   padding-left: 35px;
   margin-bottom: 20px;
-  font-size: .75rem;
-  color: var(--color-grey);
 }
 
 .form-checkbox input {
@@ -562,4 +560,8 @@ a {
   background-image: url("../assets/Checkmark.svg");
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.consent-text {
+  line-height: 17px;
 }
