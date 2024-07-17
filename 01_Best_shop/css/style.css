@@ -563,5 +563,7 @@ a {
 }
 
 .consent-text {
+
+  color: var(--color-grey);
   line-height: 17px;
 }
