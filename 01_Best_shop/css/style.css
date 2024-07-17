@@ -7,7 +7,7 @@
   --color-white: #ffffff;
   --color-grey: #a5a5a5;
   --color-light-grey: #f7f7f7;
-  --button-radius: 35px;
+  --border-radius: 35px;
   --font-raleway: "Raleway", sans-serif;
   --font-open-sans: "Open Sans", sans-serif;
 }
@@ -395,13 +395,12 @@ a {
 }
 
 .pricing-items::before {
-  content: '';
+  content: "";
   width: 11px;
   height: 11px;
   margin-right: 10px;
   display: inline-block;
   background-image: url("../assets/Ckechmark-1.svg");
-
 }
 
 .pricing-items-not {
@@ -410,7 +409,7 @@ a {
 }
 
 .pricing-items-not::before {
-  content: '';
+  content: "";
   width: 11px;
   height: 11px;
   margin-right: 10px;
@@ -438,78 +437,78 @@ a {
   width: 400px;
   height: 500px;
   margin: 0 40px;
- }
+}
 
- .professional-button {
+.professional-button {
   background-color: var(--color-primary);
   position: relative;
   bottom: -95px;
- }
+}
 
- .professional-price {
+.professional-price {
   color: var(--color-primary);
- }
+}
 
- .pricing-box-premium {
+.pricing-box-premium {
   border-color: var(--color-green);
- }
+}
 
- .premium-button {
+.premium-button {
   background-color: var(--color-green);
- }
+}
 
- .premium-price {
+.premium-price {
   color: var(--color-green);
- }
+}
 
- .contact-container {
+.contact-container {
   margin: 80px auto;
   display: flex;
   justify-content: center;
   width: 855px;
- }
+}
 
- .contact-column {
+.contact-column {
   width: 50%;
- }
+}
 
- .contact-heading {
+.contact-heading {
   font-family: var(--font-raleway);
   font-size: 49px;
   margin-bottom: 22px;
-  line-height: 3.6875rem
- }
+  line-height: 3.6875rem;
+}
 
- .contact-instruction {
+.contact-instruction {
   font-family: var(--font-open-sans);
   margin-bottom: 40px;
   line-height: 1.375rem;
- }
+}
 
- .details-item {
+.details-item {
   margin-right: 20px;
   color: var(--color-grey);
- }
+}
 
- .contact-details img {
+.contact-details img {
   margin-right: 10px;
- }
+}
 
- .form {
+.form {
   display: flex;
   flex-direction: column;
- }
+}
 
- .form-field {
+.form-field {
   display: flex;
   flex-direction: column;
- }
+}
 
- .form-field:first-of-type {
+.form-field:first-of-type {
   margin-bottom: 42px;
 }
 
- .form-label {
+.form-label {
   font-weight: bold;
   text-transform: uppercase;
   color: var(--color-primary);
@@ -567,4 +566,15 @@ a {
   font-size: 0.75rem;
   color: var(--color-grey);
   line-height: 17px;
+}
+
+.form-button {
+  background-color: var(--color-primary);
+  border: none;
+  font-size: 0.8125rem;
+  padding: 20px 97px;
+  align-self: flex-end;
+  margin-top: 20px;
+  border-radius: 35px;
+  color: var(--color-white);
 }
