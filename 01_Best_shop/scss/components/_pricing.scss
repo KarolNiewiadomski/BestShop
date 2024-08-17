@@ -1,0 +1,134 @@
+ .pricing-title {
+    text-align: center;
+    font-family: var(--font-raleway);
+    font-size: 36px;
+  }
+  
+  .pricing {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pricing-boxes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .pricing-box {
+    width: 372px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--color-redish);
+  }
+  
+  .pricing-details {
+    margin-top: 34px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  
+  .pricing-type {
+    font-size: 1.25rem;
+    font-family: var(--font-raleway);
+    font-weight: 700;
+  }
+  
+  .pricing-price {
+    font-size: 2.875rem;
+    font-family: var(--font-open-sans);
+    font-weight: 300;
+    margin-top: 25px;
+    color: var(--color-redish);
+  }
+  
+  .pricing-limited {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.75rem;
+    font-family: var(--font-raleway);
+    font-weight: 700;
+  }
+  
+  .pricing-list {
+    list-style: none;
+  }
+  
+  .pricing-items {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .pricing-items::before {
+    content: "";
+    width: 11px;
+    height: 11px;
+    margin-right: 10px;
+    display: inline-block;
+    background-image: url("../assets/Ckechmark-1.svg");
+  }
+  
+  .pricing-items-not {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .pricing-items-not::before {
+    content: "";
+    width: 11px;
+    height: 11px;
+    margin-right: 10px;
+    display: inline-block;
+    background-image: url("../assets/Close.svg");
+  }
+  
+  .pricing-button {
+    background-color: var(--color-redish);
+    position: relative;
+    bottom: -25px;
+    font-size: 0.8125rem;
+    color: var(--color-white);
+    border-radius: 23px;
+    padding: 16px 57px;
+  }
+  
+  .pricing-basic .pricing-price {
+    margin-bottom: 30px;
+  }
+  
+  .pricing-box-professional {
+    border-color: var(--color-primary);
+    box-shadow: 5px 1px 27px var(--color-primary-shadow);
+    width: 400px;
+    height: 550px;
+    margin: 0 40px;
+
+    .professional-button {
+      background-color: var(--color-primary);
+      position: relative;
+      bottom: -70px;
+    }
+
+    .professional-price {
+      color: var(--color-primary);
+    }
+  }
+
+  
+  .pricing-box-premium {
+    border-color: var(--color-green);
+  }
+  
+  .premium-button {
+    background-color: var(--color-green);
+  }
+  
+  .premium-price {
+    color: var(--color-green);
+  } 

@@ -1,49 +1,50 @@
 .benefits {
     padding: 100px 0;
     background-color: var(--color-light-grey);
+
+    .benefits-container {
+        padding: 0 100px;
+        margin: 0 auto;
+        max-width: 1200px;
+      }
+
+      .benefits-box {
+        background-color: var(--color-white);
+        border: 1px solid #e8e9ed;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 37px;
+      }
+
+      .benefits-text {
+        width: 415px;
+        margin: 91px 35px;
+      }
+      
+      .benefits-text::after {
+        display: block;
+        content: "";
+        width: 328px;
+        height: 4px;
+        background-color: var(--color-redish);
+        margin-top: 50px;
+      }
+      
+      .benefits-title {
+        font-family: var(--font-raleway);
+        font-size: 2.25rem;
+        margin-bottom: 30px;
+      }
+      
+      .benefit-description {
+        font-family: var(--font-open-sans);
+        font-size: 1rem;
+        line-height: 18px;
+      }
   }
   
-  .benefits-container {
-    padding: 0 100px;
-    margin: 0 auto;
-    max-width: 1200px;
-  }
-  
-  .benefits-box {
-    background-color: var(--color-white);
-    border: 1px solid #e8e9ed;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 37px;
-  }
-  
-  .benefits-text {
-    width: 415px;
-    margin: 91px 35px;
-  }
-  
-  .benefits-text::after {
-    display: block;
-    content: "";
-    width: 328px;
-    height: 4px;
-    background-color: var(--color-redish);
-    margin-top: 50px;
-  }
-  
-  .benefits-title {
-    font-family: var(--font-raleway);
-    font-size: 2.25rem;
-    margin-bottom: 30px;
-  }
-  
-  .benefit-description {
-    font-family: var(--font-open-sans);
-    font-size: 1rem;
-    line-height: 18px;
-  }
   
   .benefits-img {
     position: relative;
@@ -116,6 +117,7 @@
   
   .benefits-right {
     width: 440px;
+    height: 430px;
     display: flex;
     justify-content: center;
     align-items: center;
