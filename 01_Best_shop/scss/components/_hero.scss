@@ -16,12 +16,11 @@
 
         @include mobile {
           padding: 0 70px;
-          margin-top: 50px;
         }
       }
       
       &-text {
-        margin:  0 38px 0;
+        margin:  50px auto;
         font-size: 1.5rem;
         font-family: $font-open-sans;
         

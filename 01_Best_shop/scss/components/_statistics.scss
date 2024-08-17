@@ -1,28 +1,42 @@
-.statistics-section {
- 
-}
-
 .statistic-title {
   text-align: center;
   font-family: $font-raleway;
   font-size: 2.25rem;
-  margin: 90px 0;
+  margin: 0 auto;
+  margin-top: 120px;
+
+  @include mobile {
+    margin-top: 150px;
+    width: 300px;
+    font-weight: 400;
+  }
 }
 
 .statistics-container {
-  width: 800px;
+  max-width: 800px;
   margin: 100px auto 120px;
   display: flex;
   justify-content: space-between;
 
+  @include mobile {
+    margin: 40px auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .statistics {
     text-align: center;
-    width: 116px;
+    width: 120px;
     font-family: $font-raleway;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include mobile {
+      margin: 20px;
+      width: 150px;
+    }
   }
 
   .statistic-circle {
