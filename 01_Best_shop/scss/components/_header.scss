@@ -41,16 +41,13 @@
         z-index: 9999;
         cursor: pointer;
         transition: all 0.5s;
-    
-        @media #{$width-tablet} {
-          display: none;
       }
       
       .nav-bar {
         display: flex;
       }
-
-
+    }
+    
       .nav-links {
         color: var(--color-grey);
         letter-spacing: 3.28px;
@@ -74,12 +71,4 @@
       .nav-element:last-child {
         padding-right: 0;
       }
-
-  }
-  
- 
-  
-  
-  
-  
   
