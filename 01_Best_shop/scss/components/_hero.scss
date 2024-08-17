@@ -5,7 +5,7 @@
     text-align: center;
 
     .opening-heading {
-        font-family: var(--font-raleway);
+        font-family: $font-raleway;
         font-size: 3.0625rem;
       }
       
@@ -14,17 +14,17 @@
       }
       
       .btn {
-        color: var(--color-white);
+        color: $color-white;
         font-weight: bold;
         display: inline-block;
-        border-radius: var(--button-radius);
-        font-family: var(--font-open-sans);
+        border-radius: $border-radius;
+        font-family: $font-open-sans;
       }
       
       .opening-button {
-        background-color: var(--color-primary);
+        background-color: $color-primary;
         padding: 22px 157px;
-        box-shadow: 5px 10px 14px var(--color-primary-shadow);
+        box-shadow: 5px 10px 14px $color-primary-shadow;
       }
       
       .background-image {

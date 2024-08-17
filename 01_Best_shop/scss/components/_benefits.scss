@@ -1,6 +1,6 @@
 .benefits {
     padding: 100px 0;
-    background-color: var(--color-light-grey);
+    background-color: $color-light-grey;
 
     .benefits-container {
         padding: 0 100px;
@@ -9,7 +9,7 @@
       }
 
       .benefits-box {
-        background-color: var(--color-white);
+        background-color: $color-white;
         border: 1px solid #e8e9ed;
         border-radius: 5px;
         display: flex;
@@ -28,18 +28,18 @@
         content: "";
         width: 328px;
         height: 4px;
-        background-color: var(--color-redish);
+        background-color: $color-redish;
         margin-top: 50px;
       }
       
       .benefits-title {
-        font-family: var(--font-raleway);
+        font-family: $font-raleway;
         font-size: 2.25rem;
         margin-bottom: 30px;
       }
       
       .benefit-description {
-        font-family: var(--font-open-sans);
+        font-family: $font-open-sans;
         font-size: 1rem;
         line-height: 18px;
       }
@@ -64,7 +64,7 @@
     display: block;
     width: 180px;
     height: 180px;
-    background-color: var(--color-redish);
+    background-color: $color-redish;
     border-radius: 41px;
     position: absolute;
     transform: rotate(45deg);
@@ -82,7 +82,7 @@
     content: "";
     width: 328px;
     height: 4px;
-    background-color: var(--color-primary);
+    background-color: $color-primary;
     margin-top: 50px;
   }
   
@@ -98,9 +98,9 @@
     display: block;
     width: 320px;
     height: 320px;
-    background-color: var(--color-primary);
+    background-color: $color-primary;
     position: absolute;
-    border-radius: 50%;
+    border-radius: 50px;
     top: -20px;
     left: -15px;
   }
@@ -121,7 +121,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-green);
+    background-color: $color-green;
   }
   
   .benefits-double .benefits-text::after {
@@ -129,7 +129,7 @@
     content: "";
     width: 328px;
     height: 4px;
-    background-color: var(--color-green);
+    background-color: $color-green;
     margin-top: 50px;
   }
   

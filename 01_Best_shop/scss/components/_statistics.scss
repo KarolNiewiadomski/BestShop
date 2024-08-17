@@ -4,7 +4,7 @@
 
 .statistic-title {
   text-align: center;
-  font-family: var(--font-raleway);
+  font-family: $font-raleway;
   font-size: 2.25rem;
   margin: 90px 0;
 }
@@ -18,7 +18,7 @@
   .statistics {
     text-align: center;
     width: 116px;
-    font-family: var(--font-raleway);
+    font-family: $font-raleway;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,7 +38,7 @@
 }
 
 .statistics:nth-child(1) .statistic-circle {
-  background-color: var(--color-redish);
+  background-color: $color-redish;
 }
 
 .statistics:nth-child(1) .statistic-img {
@@ -47,7 +47,7 @@
 }
 
 .statistics:nth-child(2) .statistic-circle {
-  background-color: var(--color-primary);
+  background-color: $color-primary;
 }
 
 .statistics:nth-child(2) .statistic-img {
@@ -56,7 +56,7 @@
 }
 
 .statistics:nth-child(3) .statistic-circle {
-  background-color: var(--color-green);
+  background-color: $color-green;
 }
 
 .statistics:nth-child(3) .statistic-img {
@@ -71,7 +71,7 @@
   margin-top: 14px;
 
   .stat-text {
-    color: var(--color-grey);
+    color: $color-grey;
     margin-top: 19px;
   }
 }

@@ -9,21 +9,21 @@
     width: 50%;
 
     .contact-heading {
-        font-family: var(--font-raleway);
+        font-family: $font-raleway;
         font-size: 49px;
         margin-bottom: 22px;
         line-height: 3.6875rem;
       }
       
       .contact-instruction {
-        font-family: var(--font-open-sans);
+        font-family: $font-open-sans;
         margin-bottom: 40px;
         line-height: 1.375rem;
       }
       
       .details-item {
         margin-right: 20px;
-        color: var(--color-grey);
+        color: $color-grey;
       }
       
       .contact-details img {
@@ -49,7 +49,7 @@
       .form-label {
         font-weight: bold;
         text-transform: uppercase;
-        color: var(--color-primary);
+        color: $color-primary;
         line-height: 0.9rem;
         letter-spacing: 3px;
         font-size: 0.6875rem;
@@ -57,7 +57,7 @@
       
       .form-input {
         border: none;
-        border-bottom: 1px solid var(--color-grey);
+        border-bottom: 1px solid $color-grey;
         background-color: transparent;
         line-height: 2.625rem;
       }
@@ -88,8 +88,8 @@
         left: 0;
         height: 25px;
         width: 25px;
-        background-color: var(--color-white);
-        border: 1px solid var(--color-grey);
+        background-color: $color-white;
+        border: 1px solid $color-grey;
         border-radius: 4px;
       }
       
@@ -102,19 +102,19 @@
       .consent-text {
         margin: 0 10px;
         font-size: 0.75rem;
-        color: var(--color-grey);
+        color: $color-grey;
         line-height: 17px;
       }
       
       .form-button {
-        background-color: var(--color-primary);
+        background-color: $color-primary;
         border: none;
         font-size: 0.8125rem;
         padding: 20px 97px;
         align-self: flex-end;
         margin-top: 20px;
         border-radius: 35px;
-        color: var(--color-white);
+        color: $color-white;
         cursor: pointer;
       }
       
