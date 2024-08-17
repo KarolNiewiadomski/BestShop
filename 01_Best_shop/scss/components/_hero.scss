@@ -4,13 +4,42 @@
     align-items: center;
     text-align: center;
 
-    .opening-heading {
+    &-container {
+      width: 100%;
+      display: block;
+    }
+    
+    &-heading {
         font-family: $font-raleway;
         font-size: 3.0625rem;
+        font-weight: 400;
+
+        @include mobile {
+          padding: 0 70px;
+          margin-top: 50px;
+        }
       }
       
-      .opening-text {
-        margin: 20px 0 38px 0;
+      &-text {
+        margin:  0 38px 0;
+        font-size: 1.5rem;
+        font-family: $font-open-sans;
+        
+        @include mobile {
+          margin: 70px auto;
+          text-align: center;
+          width: 370px;
+        }
+      }
+      
+      &-button {
+        background-color: $color-primary;
+        padding: 22px 157px;
+        box-shadow: 5px 10px 14px $color-primary-shadow;
+
+        @include mobile {
+          margin-bottom: 150px;
+        } 
       }
       
       .btn {
@@ -21,15 +50,13 @@
         font-family: $font-open-sans;
       }
       
-      .opening-button {
-        background-color: $color-primary;
-        padding: 22px 157px;
-        box-shadow: 5px 10px 14px $color-primary-shadow;
-      }
-      
       .background-image {
         width: 100%;
         height: auto;
+        
+        @include mobile {
+          transform: scale(2);
+         }
       }
   }
   
