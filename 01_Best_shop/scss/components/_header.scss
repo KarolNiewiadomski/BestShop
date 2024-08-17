@@ -32,7 +32,7 @@
       .nav-hamburger-icon {
         font-size: 28px;
         color: white;
-        background-color: #bbb;
+        background-color: #080505;
         padding: 5px 25px;
         border-radius: 5px;
         position: fixed;
@@ -41,6 +41,7 @@
         z-index: 9999;
         cursor: pointer;
         transition: all 0.5s;
+        display: none; //hidden hamburger icon
       }
       
       .nav-bar {
