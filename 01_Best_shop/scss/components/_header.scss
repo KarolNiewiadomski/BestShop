@@ -31,13 +31,12 @@
     
       .nav-hamburger-icon {
         font-size: 28px;
-        color: white;
-        background-color: #080505;
+        color: $color-primary;
         padding: 5px 25px;
         border-radius: 5px;
         position: fixed;
         top: 10px;
-        left: 10px;
+        right: 10px;
         z-index: 9999;
         cursor: pointer;
         transition: all 0.5s;
