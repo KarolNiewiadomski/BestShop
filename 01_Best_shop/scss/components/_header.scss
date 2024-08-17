@@ -17,6 +17,35 @@
         color: var(--color-primary);
       }
 
+      .nav-hamburger-hidden-btn {
+        display: none;
+    
+        &:checked ~ .nav-hamburger-icon {
+          left: 310px;
+        }
+    
+        &:checked ~ .nav-side-menu {
+          left: 0;
+        }
+      }
+    
+      .nav-hamburger-icon {
+        font-size: 28px;
+        color: white;
+        background-color: #bbb;
+        padding: 5px 25px;
+        border-radius: 5px;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 9999;
+        cursor: pointer;
+        transition: all 0.5s;
+    
+        @media #{$width-tablet} {
+          display: none;
+      }
+      
       .nav-bar {
         display: flex;
       }
