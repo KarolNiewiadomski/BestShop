@@ -10,6 +10,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include mobile {
+      margin: 50px auto;
+    }
   }
   
   .pricing-boxes {
@@ -17,6 +21,11 @@
     align-items: center;
     justify-content: center;
     margin-top: 50px;
+
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+    }
   }
   
   .pricing-box {
@@ -26,12 +35,33 @@
     flex-direction: column;
     align-items: center;
     border: 1px solid $color-redish;
+
+    @include mobile {
+      width: 100%;
+      max-width: 450px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+      margin-top: 50px;
+      justify-content: center;
+      padding: 25px 0 0 0;
+    
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
   
   .pricing-details {
     margin-top: 34px;
     margin-bottom: 60px;
     text-align: center;
+
+    @include mobile {
+      width: 50%;
+      margin: 0;
+      padding: 0;
+    }
   }
   
   .pricing-type {
@@ -58,11 +88,22 @@
   
   .pricing-list {
     list-style: none;
+
+    @include mobile {
+      width: 50%;
+      padding-left: 0;
+    }
   }
   
   .pricing-items {
     font-size: 14px;
     margin-bottom: 20px;
+
+    @include mobile {
+      width: 50%;
+      text-align: left;
+      flex-wrap: wrap;
+    }
   }
   
   .pricing-items::before {
@@ -117,6 +158,10 @@
 
     .professional-price {
       color: $color-primary;
+    }
+
+    @include mobile {
+      
     }
   }
 
