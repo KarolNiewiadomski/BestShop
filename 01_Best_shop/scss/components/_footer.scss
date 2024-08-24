@@ -2,6 +2,10 @@
     box-shadow: 0 -5px 40px #00000029;
     padding: 20px 0;
 
+    @include tablet {
+      max-height: 100px;
+    }
+
     .footer-container {
         display: flex;
         justify-content: space-between;
@@ -19,6 +23,18 @@
         line-height: 1.5rem;
         color: $color-grey;
         margin-top: 6px;
+
+        @include tablet {
+          margin: 0;
+        }
+      }
+
+      .footer-icons {
+        @include tablet {
+          display: flex;
+          flex-direction: row;
+          max-height: 200px;
+        }
       }
       
       .footer-icons a:first-of-type {
