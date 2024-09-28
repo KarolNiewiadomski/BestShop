@@ -10,4 +10,36 @@ function Calculator(form, summary) {
     accounting: 35,
     terminal: 5,
   };
+
+  this.form = {
+    products: form.querySelector("#products"),
+    orders: form.querySelector("#orders"),
+    package: form.querySelector("#package"),
+    accounting: form.querySelector("#accounting"),
+    terminal: form.querySelector("#terminal"),
+  };
+
+  this.summary = {
+    list: summary.querySelector("ul"),
+    items: summary.querySelector("ul").children,
+    total: {
+      container: summary.querySelector("#total-price"),
+      price: summary.querySelector(".total__price"),
+    },
+  };
+}
+
+function addEvents() {
+  this.form.products.addEventListener("change", this.inputEvent.bind(this));
+  this.form.products.addEventListener("keyup", this.inputEvent.bind(this));
+  this.form.orders.addEventListener("change", this.inputEvent.bind(this));
+  this.form.orders.addEventListener("keyup", this.inputEvent.bind(this));
+
+  this.form.package.addEventListener("click", this.selectEvent.bind(this));
+
+  this.form.accounting.addEventListener(
+    "change",
+    this.checkboxEvent.bind(this)
+  );
+  this.form.terminal.addEventListener("change", this.checkboxEvent.bind(this));
 }
