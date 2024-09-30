@@ -1,21 +1,80 @@
-const inputQuantity = document.querySelector("#products");
-const inputOrder = document.querySelector("#orders");
-const inputPackage = document.querySelector("#package");
-const dropDown = document.querySelector(".select_dropdown");
-const accountingCheckbox = document.querySelector("#accounting");
-const terminalCheckbox = document.querySelector("#terminal");
-const totalPrice = document.querySelector(".total_price");
+// // add event listeners to calc columns so that list_items apear in calc_summary
+// // add the calc column values so that they are calculated in every option chosen.
+//event listeners to add class .open to list items (make a for look for all list items to add this class on change)
 
-const updateTotalPrice = () => {
-  let totalSum = 0;
-  document.querySelectorAll("item_price").forEach((item) => {
-    totalSum += Number;
-    item.innerText.replace("$", "");
+const formInputs = document.querySelectorAll(".form_input");
+const checkboxes = document.querySelectorAll(".form_checkbox input");
+const summaryItems = document.querySelectorAll(".list_item");
+const totalPriceElement = document.querySelector(".total_price");
+//interactive dropdown selectors
+const dropdown = document.getElementById("package");
+const selectInput = dropdown.querySelector(".select_input");
+const selectDropdown = dropdown.querySelector(".select_dropdown");
+
+function updateSummary() {
+  let total = 0;
+
+  summaryItems.forEach((item) => {
+    const itemId = item.getAttribute("data-id");
+    let price = 0;
+
+    if (itemId === "products") {
+      const products = document.getElementById("products").value || 0;
+      price = products * 0.5;
+    } else if (itemId === "orders") {
+      const orders = document.getElementById("orders").value || 0;
+      price = orders * 0.25;
+    } else if (itemId === "package") {
+      const packageValue = document
+        .querySelector("#package .select_input")
+        .innerText.trim();
+
+      price =
+        packageValue === "Premium"
+          ? 60
+          : packageValue === "Professional"
+            ? 25
+            : 0;
+    } else if (itemId === "accounting") {
+      if (document.getElementById("accounting").checked) price = 10;
+    } else if (itemId === "terminal") {
+      if (document.getElementById("terminal").checked) price = 10;
+    }
+
+    item.querySelector(".item_price").innerText = `$${price.toFixed(2)}`;
+    total += price;
+    item.classList.add("open");
   });
-  totalPrice.innerText = "$" + totalSum;
-};
 
-const hideElements = () => {
-  const listItem = document.querySelectorAll(".item_calc");
-  listItem.forEach((item) => (item.style.display = "none"));
-};
+  totalPriceElement.innerText = `$${total.toFixed(2)}`;
+}
+
+formInputs.forEach((input) => input.addEventListener("input", updateSummary));
+checkboxes.forEach((checkbox) =>
+  checkbox.addEventListener("change", updateSummary)
+);
+
+const packageSelect = document.getElementById("package");
+packageSelect.addEventListener("click", function (event) {
+  if (event.target.tagName === "li") {
+    packageSelect.querySelector(".select_input").innerText =
+      event.target.innerText;
+    updateSummary();
+  }
+});
+
+selectInput.addEventListener("click", function () {
+  dropdown.classList.toggle("open");
+  selectDropdown.classList.toggle("open ");
+});
+
+const options = selectDropdown.querySelectorAll("li");
+options.forEach((option) => {
+  option.addEventListener("click", function () {
+    selectInput.textContent = this.textContent;
+    dropdown.classList.remove("open");
+    selectDropdown.classList.remove("open ");
+  });
+});
+
+updateSummary();
