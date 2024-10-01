@@ -1,11 +1,8 @@
-// // add event listeners to calc columns so that list_items apear in calc_summary
-// // add the calc column values so that they are calculated in every option chosen.
-//event listeners to add class .open to list items (make a for look for all list items to add this class on change)
-
 const formInputs = document.querySelectorAll(".form_input");
 const checkboxes = document.querySelectorAll(".form_checkbox input");
 const summaryItems = document.querySelectorAll(".list_item");
 const totalPriceElement = document.querySelector(".total_price");
+const totalElement = document.querySelector(".summary_total");
 //interactive dropdown selectors
 const dropdown = document.getElementById("package");
 const selectInput = dropdown.querySelector(".select_input");
@@ -13,6 +10,10 @@ const selectDropdown = dropdown.querySelector(".select_dropdown");
 
 function updateSummary() {
   let total = 0;
+
+  summaryItems.forEach((item) => {
+    item.classList.remove("open");
+  });
 
   summaryItems.forEach((item) => {
     const itemId = item.getAttribute("data-id");
@@ -36,16 +37,19 @@ function updateSummary() {
             ? 25
             : 0;
     } else if (itemId === "accounting") {
-      if (document.getElementById("accounting").checked) price = 10;
+      if (document.getElementById("accounting").checked) price = 35;
     } else if (itemId === "terminal") {
-      if (document.getElementById("terminal").checked) price = 10;
+      if (document.getElementById("terminal").checked) price = 5;
     }
 
     item.querySelector(".item_price").innerText = `$${price.toFixed(2)}`;
     total += price;
-    item.classList.add("open");
-  });
 
+    if (price > 0) {
+      item.classList.add("open");
+    }
+  });
+  totalElement.classList.add("open");
   totalPriceElement.innerText = `$${total.toFixed(2)}`;
 }
 
@@ -72,9 +76,8 @@ const options = selectDropdown.querySelectorAll("li");
 options.forEach((option) => {
   option.addEventListener("click", function () {
     selectInput.textContent = this.textContent;
-    dropdown.classList.remove("open");
-    selectDropdown.classList.remove("open ");
+    dropdown.classList.toggle("open");
+    selectDropdown.classList.toggle("open");
+    updateSummary();
   });
 });
-
-updateSummary();
