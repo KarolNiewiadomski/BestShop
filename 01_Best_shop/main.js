@@ -42,6 +42,14 @@ function updateSummary() {
       if (document.getElementById("terminal").checked) price = 5;
     }
 
+    if (packageValue === "Premium") {
+      price = 60;
+    } else if (packageValue === "Professional") {
+      price = 25;
+    } else {
+      price = 0;
+    }
+
     item.querySelector(".item_price").innerText = `$${price.toFixed(2)}`;
     total += price;
 
