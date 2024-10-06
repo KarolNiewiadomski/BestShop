@@ -11,7 +11,6 @@ const selectDropdown = dropdown.querySelector(".select_dropdown");
 
 function updateSummary() {
   let total = 0;
-  let packageValue = "";
 
   summaryItems.forEach((item) => {
     item.classList.remove("open");
@@ -22,10 +21,10 @@ function updateSummary() {
     let price = 0;
 
     if (itemId === "products") {
-      const products = document.getElementById("products").value || 0;
+      const products = document.getElementById("products").value || 1;
       price = products * 0.5;
     } else if (itemId === "orders") {
-      const orders = document.getElementById("orders").value || 0;
+      const orders = document.getElementById("orders").value || 1;
       price = orders * 0.25;
     } else if (itemId === "package") {
       const packageValue = document
@@ -92,6 +91,14 @@ options.forEach((option) => {
   });
 });
 
+dropdown.addEventListener("click", function (event) {
+  const li = event.target.closest("li");
+  if (li) {
+    const selectedPackage = li.innerText;
+    itemCalcSpan.innerText = selectedPackage;
+  }
+});
+
 document.addEventListener("input", function () {
   const productsValue = document.getElementById("products").value;
   const ordersValue = document.getElementById("orders").value;
@@ -100,12 +107,4 @@ document.addEventListener("input", function () {
     `${productsValue} * 0.5`;
   document.querySelector('li[data-id="orders"] .item_calc').innerText =
     `${ordersValue} * 0.25`;
-});
-
-dropdown.addEventListener("click", function (event) {
-  const li = event.target.closest("li");
-  if (li) {
-    const selectedPackage = li.innerText;
-    itemCalcSpan.innerText = selectedPackage;
-  }
 });
