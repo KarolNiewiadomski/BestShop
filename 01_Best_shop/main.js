@@ -3,6 +3,7 @@ const checkboxes = document.querySelectorAll(".form_checkbox input");
 const summaryItems = document.querySelectorAll(".list_item");
 const totalPriceElement = document.querySelector(".total_price");
 const totalElement = document.querySelector(".summary_total");
+
 //interactive dropdown selectors
 const dropdown = document.getElementById("package");
 const selectInput = dropdown.querySelector(".select_input");
@@ -21,10 +22,10 @@ function updateSummary() {
     let price = 0;
 
     if (itemId === "products") {
-      const products = document.getElementById("products").value || 1;
+      const products = document.getElementById("products").value || 0;
       price = products * 0.5;
     } else if (itemId === "orders") {
-      const orders = document.getElementById("orders").value || 1;
+      const orders = document.getElementById("orders").value || 0;
       price = orders * 0.25;
     } else if (itemId === "package") {
       const packageValue = document
@@ -90,3 +91,23 @@ options.forEach((option) => {
     updateSummary();
   });
 });
+
+document.addEventListener("input", function () {
+  const productsValue = document.getElementById("products").value;
+  const ordersValue = document.getElementById("orders").value;
+
+  document.querySelector('li[data-id="products"] .item_calc').innerText =
+    `${productsValue} * 0.5`;
+  document.querySelector('li[data-id="orders"] .item_calc').innerText =
+    `${ordersValue} * 0.25`;
+});
+
+dropdown.addEventListener("click", function (event) {
+  if (event.target.tagName === "li") {
+    const selectedPackage = event.target.innerText;
+
+    itemCalcSpan.innerText = selectedPackage;
+  }
+});
+
+const itemCalcSpan = document.querySelector('li[data-id="package"] .item_calc');
