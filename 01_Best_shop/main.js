@@ -3,7 +3,7 @@ const checkboxes = document.querySelectorAll(".form_checkbox input");
 const summaryItems = document.querySelectorAll(".list_item");
 const totalPriceElement = document.querySelector(".total_price");
 const totalElement = document.querySelector(".summary_total");
-
+const itemCalcSpan = document.querySelector('li[data-id="package"] .item_calc');
 //interactive dropdown selectors
 const dropdown = document.getElementById("package");
 const selectInput = dropdown.querySelector(".select_input");
@@ -103,11 +103,9 @@ document.addEventListener("input", function () {
 });
 
 dropdown.addEventListener("click", function (event) {
-  if (event.target.tagName === "li") {
-    const selectedPackage = event.target.innerText;
-
+  const li = event.target.closest("li");
+  if (li) {
+    const selectedPackage = li.innerText;
     itemCalcSpan.innerText = selectedPackage;
   }
 });
-
-const itemCalcSpan = document.querySelector('li[data-id="package"] .item_calc');
