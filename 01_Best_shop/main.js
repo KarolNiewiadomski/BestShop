@@ -10,6 +10,7 @@ const selectDropdown = dropdown.querySelector(".select_dropdown");
 
 function updateSummary() {
   let total = 0;
+  let packageValue = "";
 
   summaryItems.forEach((item) => {
     item.classList.remove("open");
@@ -20,10 +21,10 @@ function updateSummary() {
     let price = 0;
 
     if (itemId === "products") {
-      const products = document.getElementById("products").value || 0;
+      const products = document.getElementById("products").value || 1;
       price = products * 0.5;
     } else if (itemId === "orders") {
-      const orders = document.getElementById("orders").value || 0;
+      const orders = document.getElementById("orders").value || 1;
       price = orders * 0.25;
     } else if (itemId === "package") {
       const packageValue = document
@@ -42,13 +43,13 @@ function updateSummary() {
       if (document.getElementById("terminal").checked) price = 5;
     }
 
-    if (packageValue === "Premium") {
-      price = 60;
-    } else if (packageValue === "Professional") {
-      price = 25;
-    } else {
-      price = 0;
-    }
+    // if (packageValue === "Premium") {
+    //   price = 60;
+    // } else if (packageValue === "Professional") {
+    //   price = 25;
+    // } else {
+    //   price = 0;
+    // }
 
     item.querySelector(".item_price").innerText = `$${price.toFixed(2)}`;
     total += price;
@@ -77,7 +78,7 @@ packageSelect.addEventListener("click", function (event) {
 
 selectInput.addEventListener("click", function () {
   dropdown.classList.toggle("open");
-  selectDropdown.classList.toggle("open ");
+  selectDropdown.classList.toggle("open");
 });
 
 const options = selectDropdown.querySelectorAll("li");
